@@ -16,7 +16,6 @@ public class  LionTest {
     private static final String MALE = "Самец";
     private static final String FEMALE = "Самка";
     private static final String EXCEPTION_SEX = "sexException";
-    private static final String EXCEPTION_MESSAGE = "Используйте допустимые значения пола животного - самец или самка";
     private static final String EXCEPTION_MESSAGE_ACTUAL = "Ожидаемое значение не соответствует фактическому";
     private Lion lion;
 
