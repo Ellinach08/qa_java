@@ -34,7 +34,7 @@ public class LionManeParameterizedTest {
     }
 
     @Test
-    public void haveMane() throws Exception {
+    public void haveManeTest() throws Exception {
         lion = new Lion(sex, feline);
         assertEquals(EXCEPTION_MESSAGE, hasMane, lion.doesHaveMane());
     }

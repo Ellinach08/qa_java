@@ -1,10 +1,13 @@
 import com.example.Cat;
 import com.example.Feline;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,18 +20,24 @@ public class CatTest {
     @Mock
     Feline feline;
 
-    @Test
-    public void getSound() {
+    @Before
+    public void setUp(){
         cat = new Cat(feline);
+    }
+
+    @Test
+    public void getSoundTest() {
         String expected = "Мяу";
         String actual = cat.getSound();
         assertEquals(EXCEPTION_MESSAGE,expected, actual);
     }
 
     @Test
-    public void getFood() throws Exception {
-        cat = new Cat(feline);
+    public void getFoodTest() throws Exception {
         cat.getFood();
-        Mockito.verify(feline).eatMeat();
+        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        Mockito.when(feline.eatMeat()).thenReturn(expectedFood);
+        List<String> actualFood = cat.getFood();
+        assertEquals(EXCEPTION_MESSAGE, expectedFood, actualFood);
     }
 }

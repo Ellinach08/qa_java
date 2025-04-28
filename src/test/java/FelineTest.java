@@ -11,7 +11,7 @@ public class FelineTest {
     private static final String EXCEPTION_MESSAGE = "Ожидаемое значение не соответствует фактическому";
 
     @Test
-    public void eatMeat() throws Exception {
+    public void eatMeatTest() throws Exception {
         feline = new Feline();
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         List<String> actualFood = feline.eatMeat();
@@ -19,7 +19,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getFamily() {
+    public void getFamilyTest() {
         feline = new Feline();
         String expectedFamily = "Кошачьи";
         String actualFamily = feline.getFamily();
@@ -27,7 +27,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittens() {
+    public void getKittensTest() {
         feline = new Feline();
         int expectedKittensCount = 1;
         int actualKittensCount = feline.getKittens();
@@ -35,7 +35,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittensCount() {
+    public void getKittensCountTest() {
         feline = new Feline();
         int expectedKittensCount = 3;
         int actualKittensCount = feline.getKittens(3);
