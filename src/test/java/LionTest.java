@@ -25,7 +25,7 @@ public class  LionTest {
     @Test
     public void getKittensTest() throws Exception {
         lion = new Lion(FEMALE, feline);
-        Mockito.when(feline.getKittens()).thenReturn(5);
+        Mockito.when(feline.getKittens()).thenReturn(1);
         int actualKittensCount = lion.getKittens();
         int expectedKittensCount = 5;
         assertEquals(EXCEPTION_MESSAGE_ACTUAL, expectedKittensCount, actualKittensCount);
